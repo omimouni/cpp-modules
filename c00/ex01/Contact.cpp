@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/20 21:30:07 by omimouni          #+#    #+#             */
-/*   Updated: 2021/10/21 19:14:52 by omimouni         ###   ########.fr       */
+/*   Created: 2021/10/21 18:15:27 by omimouni          #+#    #+#             */
+/*   Updated: 2021/10/21 20:23:19 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
+#include "Contact.hpp"
 
-int	main(void)
+Contact::Contact()
 {
-	PhoneBook	phonebook;
-	std::string	cmd;
-	
-	std::cout << "> ";
-	while (std::getline(std::cin, cmd))
-	{
-		if (cmd == "EXIT")
-			break ;
-		else if (cmd == "ADD")
-			phonebook.read_contact();
-		else if (cmd == "SEARCH")
-			phonebook.print_contacts();
-		std::cout << "> ";
-	}
-	return (0);
+}
+
+Contact::~Contact()
+{
+}
+
+void	Contact::print()
+{
+	std::cout << "firstname: " << this->first_name << std::endl;
+	std::cout << "lastname: " << this->last_name << std::endl;
+	std::cout << "nickname: " << this->nickname << std::endl;
+	std::cout << "darkest secret: " << this->darkest_secret << std::endl;
 }
