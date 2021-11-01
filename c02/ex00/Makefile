@@ -6,11 +6,11 @@
 #    By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/20 21:29:52 by omimouni          #+#    #+#              #
-#    Updated: 2021/10/24 20:18:24 by omimouni         ###   ########.fr        #
+#    Updated: 2021/10/24 21:38:27 by omimouni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex00
+NAME = ex01
 
 ## TODO: edit this into files
 SRCS = $(wildcard *.cpp **/*.cpp)
