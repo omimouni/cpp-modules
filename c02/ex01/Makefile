@@ -6,17 +6,18 @@
 #    By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/20 21:29:52 by omimouni          #+#    #+#              #
-#    Updated: 2021/11/01 11:18:37 by omimouni         ###   ########.fr        #
+#    Updated: 2021/11/02 09:06:45 by omimouni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex00
+NAME = ex01
 
 ## TODO: edit this into files
 SRCS = $(wildcard *.cpp **/*.cpp)
 
 OBJS = $(addprefix build/, $(SRCS:.cpp=.o))
 
+CC = clang++
 
 INC_DIR = .
 FLAGS = -Wall -Werror -Wextra -I$(INC_DIR)
@@ -26,7 +27,7 @@ HEADERS = $(wildcard $(INC_DIR)/*.hpp)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@clang++ $(FLAGS) -o $(NAME) $(OBJS)
+	@$(CC) $(FLAGS) -o $(NAME) $(OBJS)
 
 clean:
 	@rm -rf $(OBJS)
@@ -39,4 +40,4 @@ re: fclean all
 
 build/%.o: %.cpp $(HEADERS)
 	@mkdir -p $(dir $@)
-	@clang++ $(FLAGS) -c -o $@ $<
+	@$(CC)  $(FLAGS) -c -o $@ $<

@@ -5,23 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/24 19:12:23 by omimouni          #+#    #+#             */
-/*   Updated: 2021/11/02 08:56:51 by omimouni         ###   ########.fr       */
+/*   Created: 2021/11/01 11:19:25 by omimouni          #+#    #+#             */
+/*   Updated: 2021/11/02 11:47:40 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-int	main() {
+int	main()
+{
 	Fixed	a;
-	Fixed	b( a );
-	Fixed	c;
+	Fixed const b(10);
+	Fixed const c(42.42f);
+	Fixed const d( c );
 
-	c = b;
+	a = Fixed( 1234.4321f );
 
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
 
+	// std::cout << "a is " << a << std::endl;
+	// std::cout << "b is " << b << std::endl;
+	// std::cout << "c is " << c << std::endl;
+	// std::cout << "d is " << d << std::endl;
+
+	
+	// std::cout << "a is " << a.toInt() << " as integer" << std::endl;
+	// std::cout << "b is " << b.toInt() << " as integer" << std::endl;
+	// std::cout << "c is " << c.toInt() << " as integer" << std::endl;
+	// std::cout << "d is " << d.toInt() << " as integer" << std::endl;
 	return (0);
 }
