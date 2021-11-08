@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 18:19:29 by omimouni          #+#    #+#             */
-/*   Updated: 2021/10/21 20:23:47 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/11/08 18:35:08 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,6 @@ PhoneBook::PhoneBook()
 {
 	this->filled = -1;
 	this->current_num = 0;
-}
-
-PhoneBook::~PhoneBook()
-{
 }
 
 void	PhoneBook::read_contact()
