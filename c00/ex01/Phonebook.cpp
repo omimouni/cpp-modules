@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 18:19:29 by omimouni          #+#    #+#             */
-/*   Updated: 2021/11/08 18:35:08 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/11/08 18:42:22 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,31 @@ PhoneBook::PhoneBook()
 
 void	PhoneBook::read_contact()
 {
+	std::string	tmp;
+
 	if (this->filled < CONTACTS_NUM - 1)
 		this->filled++;
 	// Read new contact
 	std::cout << "first name: ";
-	std::getline(std::cin, this->contacts[this->current_num].first_name);
+	std::getline(std::cin, tmp);
+	this->contacts[this->current_num].setFirstName(tmp);
+	
 	std::cout << "last name: ";
-	std::getline(std::cin, this->contacts[this->current_num].last_name);
+	std::getline(std::cin, tmp);
+	this->contacts[this->current_num].setLastName(tmp);
+
+
 	std::cout << "nickame: ";
-	std::getline(std::cin, this->contacts[this->current_num].nickname);
-	std::cout << "darkest secret : ";
-	std::getline(std::cin, this->contacts[this->current_num].darkest_secret);
+	std::getline(std::cin, tmp);
+	this->contacts[this->current_num].setNickamae(tmp);
+	
+	std::cout << "Phonenumber : ";
+	std::getline(std::cin, tmp);
+	this->contacts[this->current_num].setPhone(tmp);
+
+	std::cout << "Darkest Secret: ";
+	std::getline(std::cin, tmp);
+	this->contacts[this->current_num].setDarketSecret(tmp);
 	
 	std::cout << "✅ Contact successfully added";
 	// Updating indexes
