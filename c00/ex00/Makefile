@@ -6,14 +6,12 @@
 #    By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/19 18:56:59 by omimouni          #+#    #+#              #
-#    Updated: 2021/10/21 20:25:24 by omimouni         ###   ########.fr        #
+#    Updated: 2021/11/12 22:45:59 by omimouni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-## TODO: name your file
 NAME = megaphone
 
-## TODO: edit this into files
 SRCS = megaphone.cpp
 
 OBJS = $(addprefix build/, $(SRCS:.cpp=.o))
@@ -26,6 +24,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@clang++ $(FLAGS) -o $(NAME) $(OBJS)
+	@echo "Program compiled !"
 
 clean:
 	@rm -rf $(OBJS)
