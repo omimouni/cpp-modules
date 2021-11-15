@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 18:19:29 by omimouni          #+#    #+#             */
-/*   Updated: 2021/11/08 18:42:22 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/11/15 00:18:27 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,11 +79,11 @@ void	PhoneBook::print_contacts()
 	{
 		std::cout << std::setw(10) << i << "|";
 		std::cout << std::setw(10) 
-			<< this->print_sub(this->contacts[i].first_name) << "|";
+			<< this->print_sub(this->contacts[i].getFirstName()) << "|";
 		std::cout << std::setw(10) 
-			<< this->print_sub(this->contacts[i].last_name) << "|";
+			<< this->print_sub(this->contacts[i].getLastName()) << "|";
 		std::cout << std::setw(10) 
-			<< this->print_sub(this->contacts[i].nickname);
+			<< this->print_sub(this->contacts[i].getNickname());
 		std::cout << std::endl;
 		i++;
 	}

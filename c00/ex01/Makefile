@@ -6,14 +6,13 @@
 #    By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/20 21:29:52 by omimouni          #+#    #+#              #
-#    Updated: 2021/10/21 18:14:19 by omimouni         ###   ########.fr        #
+#    Updated: 2021/11/13 20:42:38 by omimouni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = phonebook
 
-## TODO: edit this into files
-SRCS = $(wildcard *.cpp **/*.cpp)
+SRCS = Contact.cpp Phonebook.cpp main.cpp
 
 OBJS = $(addprefix build/, $(SRCS:.cpp=.o))
 
@@ -27,6 +26,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@clang++ $(FLAGS) -o $(NAME) $(OBJS)
+	@echo "Program compiled !"
 
 clean:
 	@rm -rf $(OBJS)

@@ -6,7 +6,7 @@
 #    By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/20 21:29:52 by omimouni          #+#    #+#              #
-#    Updated: 2021/10/23 10:06:39 by omimouni         ###   ########.fr        #
+#    Updated: 2021/11/14 21:29:38 by omimouni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@clang++ $(FLAGS) -o $(NAME) $(OBJS)
+	@echo "$(NAME) Compiled !"
 
 clean:
 	@rm -rf $(OBJS)
