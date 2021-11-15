@@ -6,14 +6,13 @@
 #    By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/20 21:29:52 by omimouni          #+#    #+#              #
-#    Updated: 2021/11/14 21:29:38 by omimouni         ###   ########.fr        #
+#    Updated: 2021/11/15 19:49:15 by omimouni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ex01
 
-## TODO: edit this into files
-SRCS = $(wildcard *.cpp **/*.cpp)
+SRCS = main.cpp Zombie.cpp ZombieHorde.cpp
 
 OBJS = $(addprefix build/, $(SRCS:.cpp=.o))
 
