@@ -6,14 +6,14 @@
 #    By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/20 21:29:52 by omimouni          #+#    #+#              #
-#    Updated: 2021/11/15 19:57:33 by omimouni         ###   ########.fr        #
+#    Updated: 2021/11/15 20:03:04 by omimouni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ex04
 
 ## TODO: edit this into files
-SRCS = $(wildcard *.cpp **/*.cpp)
+SRCS = main.cpp
 
 OBJS = $(addprefix build/, $(SRCS:.cpp=.o))
 
