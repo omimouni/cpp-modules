@@ -6,14 +6,13 @@
 #    By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/20 21:29:52 by omimouni          #+#    #+#              #
-#    Updated: 2021/10/23 10:18:19 by omimouni         ###   ########.fr        #
+#    Updated: 2021/11/15 19:55:11 by omimouni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ex03
 
-## TODO: edit this into files
-SRCS = $(wildcard *.cpp **/*.cpp)
+SRCS = HumanA.cpp HumanB.cpp main.cpp Weapon.cpp
 
 OBJS = $(addprefix build/, $(SRCS:.cpp=.o))
 
@@ -27,6 +26,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@clang++ $(FLAGS) -o $(NAME) $(OBJS)
+	@echo "$(NAME) Compiled !"
 
 clean:
 	@rm -rf $(OBJS)
