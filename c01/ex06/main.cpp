@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 18:42:33 by omimouni          #+#    #+#             */
-/*   Updated: 2021/10/24 18:49:34 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/11/15 20:17:49 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,6 @@ int	main(int argc, char **argv)
 		ind	= karen.level2index(argv[1]);
 		switch (ind)
 		{
-		case -1:
-			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
-			break;
 		case 0:
 			karen.complain("DEBUG");
 		case 1:
@@ -34,7 +31,9 @@ int	main(int argc, char **argv)
 		case 3:
 			karen.complain("ERROR");
 			break;
-
+		default:
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+			break;
 		}
 	}
 	return (0);

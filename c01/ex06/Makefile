@@ -6,14 +6,13 @@
 #    By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/20 21:29:52 by omimouni          #+#    #+#              #
-#    Updated: 2021/10/24 18:42:59 by omimouni         ###   ########.fr        #
+#    Updated: 2021/11/15 20:18:27 by omimouni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = karenFilter
 
-## TODO: edit this into files
-SRCS = $(wildcard *.cpp **/*.cpp)
+SRCS = main.cpp karen.cpp
 
 OBJS = $(addprefix build/, $(SRCS:.cpp=.o))
 
