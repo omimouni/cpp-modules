@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 03:03:08 by omimouni          #+#    #+#             */
-/*   Updated: 2021/11/16 17:02:10 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/11/16 17:34:53 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,14 @@ class Fixed {
 
         // 
         Fixed   operator + (Fixed f);
+        Fixed   operator - (Fixed f);
         Fixed   operator * (Fixed f);
+        Fixed   operator / (Fixed f);
 
         Fixed   operator ++ (int x);
+        Fixed   operator -- (int x);
         Fixed & operator ++ ();
+        Fixed & operator -- ();
 
         // 
 
@@ -49,8 +53,14 @@ class Fixed {
 };
 
 
-// Insertion operator --
 std::ostream & operator << (std::ostream &out, const Fixed &f);
+bool    operator== (const Fixed &a, const Fixed &b);
+bool    operator!= (const Fixed &a, const Fixed &b);
+
+bool    operator> (const Fixed &a, const Fixed &b);
+bool    operator< (const Fixed &a, const Fixed &b);
+bool    operator>= (const Fixed &a, const Fixed &b);
+bool    operator<= (const Fixed &a, const Fixed &b);
 
 
 #endif

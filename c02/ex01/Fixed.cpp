@@ -6,11 +6,22 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 03:02:51 by omimouni          #+#    #+#             */
-/*   Updated: 2021/11/16 03:41:16 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/11/16 04:28:47 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+#include <cmath>
+
+/**
+ * --------------
+ * Fixed Point --
+ * --------------
+ * 
+ * Resources:
+ * -> https://spin.atomicobject.com/2012/03/15/simple-fixed-point-math/
+ * ->
+ */
 
 Fixed::Fixed() {
     this->integer = 0;
@@ -23,11 +34,13 @@ Fixed::Fixed( const Fixed &f ) {
 }
 
 Fixed::Fixed(const int number) {
-    this->integer = number;
+    std::cout << "Int constructor called" << std::endl;
+    this->integer = (number * 256); // 2 ^ 8
 }
 
 Fixed::Fixed(const float number) {
-    this->integer = number;
+    std::cout << "Float constructor called" << std::endl;
+    this->integer = roundf(number * 256);
 }
 
 Fixed&  Fixed::operator= ( const Fixed &f ) {
@@ -38,7 +51,6 @@ Fixed&  Fixed::operator= ( const Fixed &f ) {
 
 
 int Fixed::getRawBits( void ) const {
-    std::cout << "getRawBits memeber function called" << std::endl;
     return (this->integer);
 }
 
@@ -46,12 +58,13 @@ void    Fixed::setRawBits( int const raw ) {
     this->integer = raw;
 }
 
+
 float   Fixed::toFloat( void ) const {
-    return (this->integer);
+    return ((float)this->integer)/256;
 }
 
 int     Fixed::toInt( void ) const {
-    return (this->integer);
+    return (this->integer)/256;
 }
 
 Fixed::~Fixed () {
