@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 03:03:08 by omimouni          #+#    #+#             */
-/*   Updated: 2021/11/16 17:57:46 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/11/16 18:09:51 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,10 @@ class Fixed {
         Fixed & operator -- ();
 
         // Static helper functions
-        static Fixed const & max(const Fixed &a, const Fixed &b);
+        static Fixed const& max(Fixed const &a, Fixed const &b);
         static Fixed & max(Fixed &a, Fixed &b);
-        static Fixed const & min(const Fixed &a, const Fixed &b);
         static Fixed & min(Fixed &a, Fixed &b);
+        static Fixed const& min(Fixed const &a, Fixed const &b);
 
     private:
         int integer;

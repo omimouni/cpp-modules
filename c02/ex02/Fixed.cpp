@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 03:02:51 by omimouni          #+#    #+#             */
-/*   Updated: 2021/11/16 17:57:55 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/11/16 18:10:16 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,18 +144,29 @@ Fixed   Fixed::operator--(int x) {
  * ------------------------------------------------------------------
 */
 
-Fixed const   &Fixed::max(const Fixed &a, const Fixed &b) {
-    if (a.getRawBits() > b.getRawBits())
-        return (a);
+Fixed   const& Fixed::max( Fixed const &a, Fixed const &b){
+    if (a > b)
+        return a;
     return b;
 }
 
-Fixed const   &Fixed::min(const Fixed &a, const Fixed &b) {
-    if (a.getRawBits() < b.getRawBits())
-        return (a);
+Fixed   &Fixed::max( Fixed &a, Fixed &b) {
+    if (a > b)
+        return a;
     return b;
 }
 
+Fixed   &Fixed::min(Fixed &a, Fixed &b) {
+    if (a < b)
+        return a;
+    return b;
+}
+
+Fixed   const&Fixed::min(Fixed const &a, Fixed const &b) {
+    if (a < b)
+        return a;
+    return b;
+}
 
 /**
  * Comparison operators
