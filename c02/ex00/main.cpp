@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 03:02:48 by omimouni          #+#    #+#             */
-/*   Updated: 2021/11/16 03:22:01 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/11/16 03:24:43 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ int main( void ) {
     std::cout << a.getRawBits() << std::endl;
     std::cout << b.getRawBits() << std::endl;
     std::cout << c.getRawBits() << std::endl;
+    
     return (0);
 }
