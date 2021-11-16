@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 03:03:08 by omimouni          #+#    #+#             */
-/*   Updated: 2021/11/16 17:34:53 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/11/16 17:36:47 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,9 @@ class Fixed {
         // 
 
         static Fixed const & max(const Fixed &a, const Fixed &b);
+        static Fixed & max(Fixed &a, Fixed &b);
         static Fixed const & min(const Fixed &a, const Fixed &b);
+        static Fixed & min(Fixed &a, Fixed &b);
 
     private:
         int integer;
