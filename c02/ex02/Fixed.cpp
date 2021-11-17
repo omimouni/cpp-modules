@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 03:02:51 by omimouni          #+#    #+#             */
-/*   Updated: 2021/11/17 18:51:59 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/11/17 18:59:54 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -201,33 +201,3 @@ Fixed   const&Fixed::min(Fixed const &a, Fixed const &b) {
         return a;
     return b;
 }
-
-/**
- * Comparison operators
- * ------------------------------------------------------------------
-*/
-
-// bool    operator== (const Fixed &a, const Fixed &b) {
-//     return (a.getRawBits() == b.getRawBits());
-// }
-
-// bool    operator!= (const Fixed &a, const Fixed &b) {
-//     return (a.getRawBits() != b.getRawBits());
-// }
-
-// bool    operator> (const Fixed &a, const Fixed &b) {
-//     return (a.getRawBits() > b.getRawBits());
-// }
-
-// bool    operator< (const Fixed &a, const Fixed &b) {
-//     return (a.getRawBits() < b.getRawBits());
-// }
-
-// bool    operator<= (const Fixed &a, const Fixed &b) {
-//     return (a.getRawBits() <= b.getRawBits());
-// }
-
-// bool    operator>= (const Fixed &a, const Fixed &b) {
-//     return (a.getRawBits() >= b.getRawBits());
-// }
-
