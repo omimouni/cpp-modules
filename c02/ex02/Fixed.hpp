@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 03:03:08 by omimouni          #+#    #+#             */
-/*   Updated: 2021/11/16 18:09:51 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/11/17 18:52:03 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,15 @@ class Fixed {
         Fixed & operator ++ ();
         Fixed & operator -- ();
 
+        // Comparison operators
+
+        bool    operator == (const Fixed &other) const;
+        bool    operator != (const Fixed &other) const;
+        bool    operator > (const Fixed &other) const;
+        bool    operator >= (const Fixed &other) const;
+        bool    operator < (const Fixed &other) const;
+        bool    operator <= (const Fixed &other) const;
+
         // Static helper functions
         static Fixed const& max(Fixed const &a, Fixed const &b);
         static Fixed & max(Fixed &a, Fixed &b);
@@ -65,13 +74,6 @@ class Fixed {
 // Insertion operator
 std::ostream & operator << (std::ostream &out, const Fixed &f);
 
-// Comparison operators
-bool    operator== (const Fixed &a, const Fixed &b);
-bool    operator!= (const Fixed &a, const Fixed &b);
-bool    operator> (const Fixed &a, const Fixed &b);
-bool    operator< (const Fixed &a, const Fixed &b);
-bool    operator>= (const Fixed &a, const Fixed &b);
-bool    operator<= (const Fixed &a, const Fixed &b);
 
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 03:02:51 by omimouni          #+#    #+#             */
-/*   Updated: 2021/11/16 03:22:49 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/11/17 17:35:45 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Fixed::Fixed( const Fixed &f ) {
 
 Fixed&  Fixed::operator= ( const Fixed &f ) {
     std::cout << "Assignation operator called" << std::endl;
-    this->setRawBits(f.getRawBits());
+    this->integer = f.getRawBits();
     return *this;
 }
 
