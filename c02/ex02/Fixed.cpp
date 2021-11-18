@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 03:02:51 by omimouni          #+#    #+#             */
-/*   Updated: 2021/11/17 18:59:54 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/11/18 03:33:56 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,26 +92,23 @@ std::ostream & operator << (std::ostream &out, const Fixed &f) {
  * ------------------------------------------------------------------
 */
 
-Fixed   Fixed::operator+(Fixed f) {
+Fixed   Fixed::operator+(Fixed const &f) {
     this->integer = this->integer + f.getRawBits();
     return  *this;
 }
 
-Fixed   Fixed::operator-(Fixed f) {
+Fixed   Fixed::operator-(Fixed const &f) {
     this->integer = this->integer - f.getRawBits();
     return  *this;
 }
 
-Fixed   Fixed::operator*(Fixed f) {
-    // this->setRawBits((this->getRawBits() * f.getRawBits()) / (1 << this->bits));
-    this->integer = (this->integer * f.getRawBits()) / (1 << this->bits);
+Fixed   Fixed::operator*(Fixed const &f) {
+    this->integer = ((int64_t)this->integer * (int64_t)f.getRawBits()) / (1 << this->bits);
     return *this;
 }
 
-Fixed   Fixed::operator/(Fixed f) {
-    // this->setRawBits(this->getRawBits() * (1 << this->bits) / f.getRawBits());
-    // TODO: Cast to long
-    this->integer = (this->integer * (1 << this->bits)) / f.getRawBits();
+Fixed  Fixed::operator/(Fixed const &f) {
+    this->integer = ((int64_t)this->integer * (1 << this->bits)) / f.getRawBits();
     return *this;
 }
 
@@ -121,25 +118,23 @@ Fixed   Fixed::operator/(Fixed f) {
 */
 
 Fixed & Fixed::operator++() {
-    // this->setRawBits(this->getRawBits() + 1);
     this->integer = this->integer + 1;
     return *this;
 }
 
 Fixed   Fixed::operator++(int x) {
-    (void)x; // BUG: Wtf?
+    std::cout << "->" << x << std::endl;
     this->setRawBits(this->getRawBits() + 1);
     return *this;
 }
 
 Fixed & Fixed::operator--() {
-    // this->setRawBits(this->getRawBits() - 1);
     this->integer = this->integer - 1;
     return *this;
 }
 
 Fixed   Fixed::operator--(int x) {
-    (void)x; // BUG: WTF?
+    std::cout << "->" << x << std::endl;
     this->setRawBits(this->getRawBits() - 1);
     return *this;
 }

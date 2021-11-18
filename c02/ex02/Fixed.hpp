@@ -6,7 +6,7 @@
 /*   By: omimouni <omimouni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 03:03:08 by omimouni          #+#    #+#             */
-/*   Updated: 2021/11/17 18:59:01 by omimouni         ###   ########.fr       */
+/*   Updated: 2021/11/18 03:34:31 by omimouni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,10 @@ class Fixed {
 
         // Arithmetic operatos
 
-        Fixed   operator + (Fixed f);
-        Fixed   operator - (Fixed f);
-        Fixed   operator * (Fixed f);
-        Fixed   operator / (Fixed f);
+        Fixed   operator + (Fixed const &f);
+        Fixed   operator - (Fixed const &f);
+        Fixed   operator * (Fixed const &f);
+        Fixed   operator / (Fixed const &f);
 
         // Increment/Decrement operators
 
